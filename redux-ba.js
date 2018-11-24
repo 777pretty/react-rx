@@ -13,7 +13,7 @@ const rootReducer = (state = initialState, action) => {
             counter: state.counter + 1
         }
     }
-
+    
     if (action.type === 'ADD_COUNT'){
         return {
             ...state,
@@ -25,11 +25,17 @@ const rootReducer = (state = initialState, action) => {
 
 // Store
 const store = createStore(rootReducer);
-console.log(store.getState());
+console.log('[#Start value]',store.getState());
+
+// Subscription
+store.subscribe(() => {
+    console.log('[Subscription]', store.getState());
+});
 
 // Dispatching Action
 store.dispatch({type: 'INC_COUNT'});
 store.dispatch({type: 'ADD_COUNT', value: 80});
-console.log(store.getState());
-
-// Subscription
+store.dispatch({type: 'INC_COUNT'});
+store.dispatch({type: 'INC_COUNT'});
+store.dispatch({type: 'INC_COUNT'});
+console.log('[Ending value]', store.getState());
