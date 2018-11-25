@@ -9,23 +9,19 @@ const reducer = (state = initialState, action) => {
         return {...state,
                 counter: state.counter + 1
         };
-        break;
         case 'DECREMENT':
         return {...state,
                 counter: state.counter - 1
         };
-        break;
         case 'ADDFIVE':
         return {...state,
                 counter: state.counter + action.value
         };
-        break;
         case 'SUBFIVE':
         return {...state,
                 counter: state.counter - action.value
         };
-        break;
-    }
+        }
     return state;
 };
 
