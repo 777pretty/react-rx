@@ -9,10 +9,12 @@ export const save_result = (rst) => {
 }
 
 export const store_result = (rst) => {
-    return dispatch => {
+    return (dispatch, getState) => {
         setTimeout(() => {
-            dispatch(save_result(rst))
-        }, 5000)   
+            const oldCnt = getState().cnt.counter;
+            console.log(oldCnt)
+            dispatch(save_result(rst));
+        }, 5000); 
     }
 };
 
