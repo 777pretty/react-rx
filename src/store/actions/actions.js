@@ -31,11 +31,19 @@ export const subfive = () => {
     };
 };
 
-export const store_result = (rst) => {
+export const save_result = (rst) => {
     return {
         type: STORE_RESULT,
         result: rst
     };
+}
+
+export const store_result = (rst) => {
+    return dispatch => {
+        setTimeout(() => {
+            dispatch(save_result(rst))
+        }, 5000)   
+    }
 };
 
 export const delete_result = (rstElId) => {
