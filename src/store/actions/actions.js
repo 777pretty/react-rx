@@ -31,17 +31,17 @@ export const subfive = () => {
     };
 };
 
-export const store_result = (result) => {
+export const store_result = (rst) => {
     return {
         type: STORE_RESULT,
-        result: result
+        result: rst
     };
 };
 
-export const delete_result = (id) => {
+export const delete_result = (rstElId) => {
     return {
         type: DELETE_RESULT,
-        resultElId: id
+        resultElId: rstElId
     };
 };
 
