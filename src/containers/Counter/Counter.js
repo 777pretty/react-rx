@@ -61,8 +61,8 @@ const mapDispatchToProps = (dispatch) => {
         onDecrCnt: () => dispatch(decrement()),
         onAddFCnt: () => dispatch(addfive()),
         onSubFCnt: () => dispatch(subfive()),
-        onStoreResult: (result) => dispatch(store_result()),
-        onDeleteResult: (id) => dispatch(delete_result())
+        onStoreResult: () => dispatch(store_result()),
+        onDeleteResult: () => dispatch(delete_result())
     }
 }
 

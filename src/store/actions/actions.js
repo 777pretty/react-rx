@@ -19,25 +19,29 @@ export const decrement = () => {
 
 export const addfive = () => {
     return {
-        type: ADDFIVE
+        type: ADDFIVE,
+        value: 5
     };
 };
 
 export const subfive = () => {
     return {
-        type: SUBFIVE
+        type: SUBFIVE,
+        value: 5
     };
 };
 
-export const store_result = () => {
+export const store_result = (result) => {
     return {
-        type: STORE_RESULT
+        type: STORE_RESULT,
+        result: result
     };
 };
 
-export const delete_result = () => {
+export const delete_result = (id) => {
     return {
-        type: DELETE_RESULT
+        type: DELETE_RESULT,
+        resultElId: id
     };
 };
 
